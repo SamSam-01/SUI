@@ -286,7 +286,7 @@ public partial class @GameActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Space Ctrl"",
+                    ""name"": ""Space X"",
                     ""id"": ""cc33ab97-70e3-4079-801d-2727e9898865"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -310,7 +310,7 @@ public partial class @GameActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""4c222ad8-651c-4422-b276-c99d80373505"",
-                    ""path"": ""<Keyboard>/ctrl"",
+                    ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

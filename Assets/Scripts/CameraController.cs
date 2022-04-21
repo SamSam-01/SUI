@@ -9,7 +9,10 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     [Range(0f, 100f)]
     private float speed = 1;
-    
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float lerpSpeed = 0.1f;
+
     [Header("Max Bounds")]
     [SerializeField]
     private float terrainMinDist = 10;
@@ -62,7 +65,9 @@ public class CameraController : MonoBehaviour
         _velocity = _direction * speed * Time.deltaTime;
 
         FixPos();
-        transform.Translate(_velocity, Space.World);
+        Vector3 lerpPosition = Vector3.Lerp(transform.position, transform.position + _velocity, lerpSpeed);
+        transform.position = lerpPosition;
+        //transform.Translate(_velocity, Space.World);
     }
 
     private void FixPos()

@@ -3,12 +3,27 @@ using UnityEngine.AI;
 
 public class MoveTo : MonoBehaviour
 {
-
-    public Transform goal;
+    private GameObject[] animals;
+    private int animalIndex;
+    private NavMeshAgent agent;
 
     void Start()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+        animals = GameObject.FindGameObjectsWithTag("Animal");
+        agent = GetComponent<NavMeshAgent>();
+        
+        agent.destination = animals[animalIndex].transform.position;
+    }
+
+    private void Update()
+    {
+        agent.destination = animals[animalIndex].transform.position;
+        if (agent.enabled && agent.remainingDistance < 0.5f)
+        {
+            if (animalIndex < animals.Length - 1)
+            {
+                animalIndex++;
+            }
+        }
     }
 }

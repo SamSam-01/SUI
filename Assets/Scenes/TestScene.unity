@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 41.2
+  lerpSpeed: 0.8
+  terrainMinDist: 10
   minX: 0
   maxX: 500
   minY: 10

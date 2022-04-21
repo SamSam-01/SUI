@@ -109,8 +109,9 @@ public class CameraController : MonoBehaviour
             Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.yellow);
             if (hit.distance < terrainMinDist)
             {
-                _velocity.y = 0;
-                transform.position = new Vector3(transform.position.x, transform.position.y + terrainMinDist - hit.distance, transform.position.z);
+                if (_velocity.y < 0)
+                    _velocity.y = 0;
+                transform.position = new Vector3(transform.position.x, transform.position.y + terrainMinDist - hit.distance - 0.1f, transform.position.z);
             }
         }
     }

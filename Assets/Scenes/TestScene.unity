@@ -154,9 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animals:
   - {fileID: 9051112340153606241, guid: b44cd4b529369c0469270872e52eabb5, type: 3}
-  maxAnimalsNbr: 2
-  maxX: 100
-  maxZ: 100
+  maxAnimalsNbr: 10000
+  maxX: 500
+  maxZ: 500
 --- !u!4 &616799784
 Transform:
   m_ObjectHideFlags: 0
